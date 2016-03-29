@@ -1,0 +1,54 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#fdd;
+    font-family: 'Open Sans', sans-serif;
+}
+.wrapper{
+    width:960px;
+    margin:0 auto;
+    background-color: #222;
+    height: 1000px;
+}
+/*HEADER pocetak*/
+.header{
+
+}
+.head h1{
+    margin:0;
+    color:#fdd7c9;
+    padding: 15px;
+}
+.head{
+    border-bottom:#fff 2px solid;
+}
+.nav{
+    overflow: hidden;
+}
+.nav ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+.nav>ul>li{
+    float:left;
+}
+.nav>ul>li>a{
+    color:#ffb;
+    text-decoration: none;
+    display:block;
+    padding:10px;
+    transition:color 0.5s, background-color 0.5s;
+}
+.nav>ul>li>a:hover{
+    background-color:#ccc;
+    color:#333;
+}
+/*HEADER kraj*/
+/*MAIN pocetak*/
+.main{
+    margin:15px;
+    padding:10px;
+    background-color:#ddd;
+}
+/*MAIN kraj*/
