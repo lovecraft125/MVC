@@ -25,8 +25,9 @@ class Entity{
     public static function find_all(){
         $result = array();
         static::setConnection();
+        $keyColumn = static::$keyColumn;
         $table = static::$table;
-        $sql = "SELECT * FROM ".$table;
+        $sql = "SELECT * FROM ".$table." ORDER BY ".$keyColumn." DESC";
         $res = mysqli_query(static::$conn,$sql);
         while($row = mysqli_fetch_object($res,get_called_class())){
             $result[] = $row;

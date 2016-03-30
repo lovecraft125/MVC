@@ -1,29 +1,10 @@
 <?php
-
-if(isset($_POST['submit']) && !empty($_POST['title']) && !empty($_POST['title'])){
-    $title = trim($_POST['title']);
-    $title = htmlspecialchars($title);
-
-    $body = trim($_POST['body']);
-    $body = htmlspecialchars($body);
-    if(!empty($_POST['author'])) {
-        $author = trim($_POST['author']);
-        $author = htmlspecialchars($author);
-    }else{
-        $author = "Anonimni korisnik";
-    }
+if(isset($_POST['submit'])){
     $articles = new classes\Article();
-
-    $articles->title = $title;
-    $articles->body = $body;
-    $articles->author = $author;
-
+    $articles->set_values($_POST);
     $articles->insert();
-
     header("Location: .");
 }
-
-
 ?>
 <div class="main">
     <h2>Dodaj novu vest</h2>
