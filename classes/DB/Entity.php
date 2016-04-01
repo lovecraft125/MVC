@@ -34,6 +34,16 @@ class Entity{
         }
         return $result;
     }
+    //zadaje se odredjeni sql
+    public static function find_by_sql($sql){
+        $result = array();
+        static::setConnection();
+        $res = mysqli_query(static::$conn,$sql);
+        while($row = mysqli_fetch_object($res)){
+            $result[] = $row;
+        }
+        return $result;
+    }
     //PREOSTALE CRUD METODE
     //Update
     public function update(){
